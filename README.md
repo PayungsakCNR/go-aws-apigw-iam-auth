@@ -15,7 +15,7 @@ AWS_SECRET_ACCESS_KEY = YYYY
 ```
 
 ## Example Request
-```
+```go
 package main
 
 import (
