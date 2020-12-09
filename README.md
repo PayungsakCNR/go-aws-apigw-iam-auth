@@ -1,10 +1,12 @@
 ## AWS API GW Auth by AWS Signatur v4
 
 - This is example of how to set up AWS Signature v4 auth with AWS API GW. 
-- Thank you example sign code from (smartystreets)[https://github.com/smartystreets-archives/go-aws-auth]
+- Thank you example sign code from [smartystreets](https://github.com/smartystreets-archives/go-aws-auth)
 
 ## Set up
-$ go get github.com/PayungsakCNR/go-aws-auth
+1. $ go get github.com/PayungsakCNR/go-aws-apigw-iam-auth
+2. Enable IAM Auth in AWS API Gateway.
+3. Generate IAM Key.
 
 ## .env Set Up
 ```
@@ -18,7 +20,7 @@ package main
 
 import (
 	"fmt"
-	awsauth "go-aws-auth"
+	awsauth "github.com/PayungsakCNR/go-aws-apigw-iam-auth"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -36,7 +38,7 @@ func main() {
 
 	awsauth.Sign(
 		req,
-		"ap-southeast-1",
+		"<region>",
 		os.Getenv("AWS_ACCESS_KEY_ID"),
 		os.Getenv("AWS_SECRET_ACCESS_KEY"))
 
