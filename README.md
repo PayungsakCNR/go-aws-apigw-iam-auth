@@ -1,6 +1,7 @@
 ## AWS API GW Auth by AWS Signature v4
 
 ![v4sigoverview](https://docs.aws.amazon.com/general/latest/gr/images/v4sigoverview.png)
+[Ref : https://docs.aws.amazon.com/general/latest/gr/sigv4_signing.html](https://docs.aws.amazon.com/general/latest/gr/sigv4_signing.html)
 
 - This is example of how to set up AWS Signature v4 auth with AWS API GW. 
 - Thank you example sign code from [smartystreets](https://github.com/smartystreets-archives/go-aws-auth)
